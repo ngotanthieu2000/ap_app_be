@@ -49,8 +49,8 @@ module.exports = {
   },
   getAlarmByText: async (req,res) =>{
     try {
-      console.log({body: req.body.text})
-      await getAlarmByChrono(req.body.text[0],(result,error)=>{
+      console.log({text: req.body.text,timeNow:req.body.timeNow})
+      await getAlarmByChrono(req.body.text[0],req.body.timeNow,(result,error)=>{
         if (error) {
           console.error(error);
           return res.status(400).json({ code: "Failure", error });
