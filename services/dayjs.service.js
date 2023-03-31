@@ -9,7 +9,7 @@ const getDiff =  (timeA,timeB) =>{
     }
 }
 module.exports = {
-    parseISO : (text,timeNow) =>{
+    parseISO : (text) =>{
         try {
             const outputFormat = 'h:mm A DD/MM/YYYY';
             let parse = dayjs(text);
