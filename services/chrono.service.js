@@ -6,8 +6,9 @@ module.exports = {
             console.log(`Chrono ====>`)
             const date = chrono.parseDate(text,{
                 instant: new Date(timeNow), 
-                timezone: "ICT",
+                timezone: -420,
             });
+            console.log({currenDate:new Date(timeNow)})
             console.log({date});
             // console.log({parseISO:parseISO(date)})
             callback(parseISO(date),null)
